@@ -1,64 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hernandez.pro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-   
-</head>
-<body>
-  <header>
-    <img src="/servidor.png" alt="logo-servifor" style="width: 75px; height: 70px; padding-right: 10px;" />
-    <h1>Hernandez.pro</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hernandez.pro</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 
-  <section>
-    <div class="container">
-      <form id="registrationForm" class="form">
-        <p class="title">Registro</p>
-        <p class="message">Regístrate completando todos los campos.</p>
-        <div class="flex">
+    
+  </head>
+  <body>
+    <header>
+      <img
+        src="/servidor.png"
+        alt="logo-servifor"
+        style="width: 75px; height: 70px; padding-right: 10px" />
+      <h1>Hernandez.pro</h1>
+
+      
+
+      <div class="header-links">
+        <ul>
+          <li><a href="/" style="color: #fff">Inicio</a></li>
+          <li><a href="/registros.html" style="color: #fff">Registros</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <form id="registrationForm" class="form">
+          <p class="title">Registro</p>
+          <p class="message">Regístrate completando todos los campos.</p>
+          <div class="flex">
+            <label>
+              <input
+                required=""
+                placeholder=""
+                type="text"
+                id="firstName"
+                class="input" />
+              <span>Nombre</span>
+            </label>
+
+            <label>
+              <input
+                required=""
+                placeholder=""
+                type="text"
+                id="lastName"
+                class="input" />
+              <span>Apellidos</span>
+            </label>
+          </div>
+
           <label>
-            <input required="" placeholder="" type="text" id="firstName" class="input" />
-            <span>Nombre</span>
+            <input
+              required=""
+              placeholder=""
+              type="number"
+              id="age"
+              class="input" />
+            <span>Edad</span>
           </label>
 
-          <label>
-            <input required="" placeholder="" type="text" id="lastName" class="input" />
-            <span>Apellidos</span>
-          </label>
-        </div>
+          <div class="flex">
+            <label>
+              <input
+                required=""
+                placeholder=""
+                type="text"
+                id="firstName"
+                class="input" />
+              <span>Calle</span>
+            </label>
 
-        <label>
-          <input required="" placeholder="" type="email" id="email" class="input" />
-          <span>Correo electrónico</span>
-        </label>
+            <label>
+              <input
+                required=""
+                placeholder=""
+                type="number"
+                id="lastName"
+                class="input" />
+              <span>Numero</span>
+            </label>
+          </div>
+          <button type="submit" class="submit">Submit</button>
+          <p class="signin">Ver registros <a href="/registros.html">Ver</a></p>
+        </form>
+        <div id="animation"></div>
+      </div>
+    </section>
 
-        <label>
-          <input required="" placeholder="" type="number" id="age" class="input" max="99" min="0" />
-          <span>Edad</span>
-        </label>
-        <label>
-          <select required="" class="input" id="career">
-            <option value="" disabled selected>Selecciona una carrera</option>
-            <option value="ingenieria">Ingeniería</option>
-            <option value="medicina">Medicina</option>
-            <option value="administracion">Administración</option>
-            <!-- Agrega más opciones según sea necesario -->
-          </select>
-          <!-- <span>Carrera</span> -->
-        </label>
-        <button type="submit" class="submit">Submit</button>
-        <p class="signin">Already have an account? <a href="#">Sign in</a></p>
-      </form>
-    </div>
-  </section>
-
-  <script src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-</body>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+  </body>
 </html>
