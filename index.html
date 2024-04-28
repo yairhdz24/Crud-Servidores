@@ -15,7 +15,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 
-    
   </head>
   <body>
     <header>
@@ -24,8 +23,6 @@
         alt="logo-servifor"
         style="width: 75px; height: 70px; padding-right: 10px" />
       <h1>Hernandez.pro</h1>
-
-      
 
       <div class="header-links">
         <ul>
@@ -37,7 +34,7 @@
 
     <section>
       <div class="container">
-        <form id="registrationForm" class="form">
+        <form id="registrationForm" class="form" action="insert_user.php" method="POST">
           <p class="title">Registro</p>
           <p class="message">Regístrate completando todos los campos.</p>
           <div class="flex">
@@ -46,6 +43,7 @@
                 required=""
                 placeholder=""
                 type="text"
+                name="nombre"
                 id="firstName"
                 class="input" />
               <span>Nombre</span>
@@ -56,6 +54,7 @@
                 required=""
                 placeholder=""
                 type="text"
+                name="apellidos"
                 id="lastName"
                 class="input" />
               <span>Apellidos</span>
@@ -66,33 +65,25 @@
             <input
               required=""
               placeholder=""
-              type="number"
-              id="age"
+              name="telefono"
+              type="telephone"
+              maxlength="10"
+              id="telephone"
               class="input" />
-            <span>Edad</span>
+            <span>Telefono</span>
           </label>
 
-          <div class="flex">
             <label>
               <input
                 required=""
                 placeholder=""
+                name="email"
                 type="text"
-                id="firstName"
+                id="email"
                 class="input" />
-              <span>Calle</span>
+              <span>Correo Electronico</span>
             </label>
-
-            <label>
-              <input
-                required=""
-                placeholder=""
-                type="number"
-                id="lastName"
-                class="input" />
-              <span>Numero</span>
-            </label>
-          </div>
+          
           <button type="submit" class="submit">Submit</button>
           <p class="signin">Ver registros <a href="/registros.html">Ver</a></p>
         </form>

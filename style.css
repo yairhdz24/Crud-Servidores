@@ -158,7 +158,7 @@ section {
   left: 10px;
   top: 15px;
   color: grey;
-  font-size: 0.9em;
+  font-size: 0.8em;
   cursor: text;
   transition: 0.3s ease;
 }
@@ -170,7 +170,7 @@ section {
 
 .form label .input:focus + span,
 .form label .input:valid + span {
-  top: -2px;
+  top: -5px;
   font-size: 0.8em;
   font-weight: 700;
   background-color: white;
@@ -244,7 +244,7 @@ table {
 
 input[type="text"],
 input[type="email"],
-input[type="number"],
+input[type="telephone"],
 input[type="select"],
 select {
   width: 100%;
