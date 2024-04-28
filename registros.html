@@ -13,13 +13,48 @@
         <tr>
           <th>Nombre</th>
           <th>Apellido</th>
-          <th>Edad</th>
+          <th>Teléfono</th>
           <th>Correo electrónico</th>
-          <th>Carrera Universitaria</th>
-          <th>Acciones</th>
         </tr>
       </thead>
-      <tbody id="userTableBody"></tbody>
+      <tbody id="userTableBody">
+        <?php
+        // Configuración de la conexión a la base de datos
+        $servername = "localhost";
+        $username = "root";
+        $password = "yairhdz24";
+        $dbname = "Servidores";
+
+        // Crea una conexión
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Verifica la conexión
+        if ($conn->connect_error) {
+            die("Conexión fallida: " . $conn->connect_error);
+        }
+
+        // Consulta SQL para obtener todos los usuarios
+        $sql = "SELECT nombre, apellidos, telefono, email FROM users";
+        $result = $conn->query($sql);
+
+        // Comprobar si hay resultados y mostrarlos en una tabla HTML
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["nombre"] . "</td>";
+                echo "<td>" . $row["apellidos"] . "</td>";
+                echo "<td>" . $row["telefono"] . "</td>";
+                echo "<td>" . $row["email"] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='4'>No se encontraron resultados.</td></tr>";
+        }
+
+        // Cerrar la conexión
+        $conn->close();
+        ?>
+      </tbody>
     </table>
   </div>
 

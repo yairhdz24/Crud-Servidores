@@ -1,6 +1,6 @@
 <?php
 // Configuración de la conexión a la base de datos
-$servername = "localhost";  
+$servername = "192.168.199.134";  // Cambia localhost por la dirección IP de tu servidor Debian
 $username = "root";
 $password = "yairhdz24";
 $dbname = "Servidores";
