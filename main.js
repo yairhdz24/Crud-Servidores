@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Configura la ruta del archivo JSON de la animación Lottie
-  const animationPath = "/public/server.json";
+  const animationPath = "/server.json";
 
   // Configura las opciones de la animación
   const animationOptions = {
