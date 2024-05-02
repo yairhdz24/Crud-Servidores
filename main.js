@@ -46,27 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Para mapear a los usuarios 
-// document.addEventListener("DOMContentLoaded", function() {
-//   const userTableBody = document.getElementById("userTableBody");
 
-//   fetch("users.json")
-//     .then(response => response.json())
-//     .then(users => {
-//       users.forEach(user => {
-//         const row = document.createElement("tr");
-//         row.innerHTML = `
-//           <td>${user.nombre}</td>
-//           <td>${user.apellido}</td>
-//           <td>${user.edad}</td>
-//           <td>${user.correo}</td>
-//           <td>${user.carrera}</td>
-//         `;
-//         userTableBody.appendChild(row);
-//       });
-//     })
-//     .catch(error => console.error("Error al cargar usuarios:", error));
-// });
 
 
 
