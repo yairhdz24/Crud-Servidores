@@ -22,7 +22,9 @@ if (isset($_POST["nombre"], $_POST["apellidos"], $_POST["telefono"], $_POST["ema
 
         // Ejecutar la consulta
         if ($stmt->execute()) {
-            echo "Usuario registrado correctamente.";
+            // Redirigir al usuario de vuelta al index.html después de insertar el usuario
+            header("Location: /index.html");
+            exit(); // Asegura que el script se detenga después de redirigir
         } else {
             echo "Error al registrar usuario.";
         }
